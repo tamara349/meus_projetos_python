@@ -6,7 +6,7 @@ total = 0
 
 
 def Linha():
-    print("-" * 50)
+    print("-" * 60)
 
 
 Linha()
@@ -33,7 +33,7 @@ while True:
         print("\033[31mValor inválido. Tente novamente.\033[m")
 print("Lista de Compras:")
 for item in compras:
-    print(f"Produto: {item['produto']}| Quantidade: {item['quantidade']}| Preço: R$ {item['preço']:.2f}")
+    print(f"Produto: {item['produto']:>15}| Quantidade: {item['quantidade']:>4}| Preço: R$ {item['preço']:>4.2f}")
 total = sum(item['quantidade'] * item['preço'] for item in compras)
 Linha()
 print(f"\nValor total da compra: R$\033[32m {valor_Parcial:.2f}\033[m")
